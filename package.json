@@ -1,0 +1,24 @@
+{
+  "name": "moviesbooking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardN1610/MovieBooking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardN1610/MovieBooking/issues"
+  },
+  "homepage": "https://github.com/richardN1610/MovieBooking#readme"
+}
