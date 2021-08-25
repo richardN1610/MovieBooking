@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!--CDN for swiper-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Mobo_logo.png" sizes="128x128" />
+    <script type="module" src="index.js"></script>
+    <title>MoBo</title>
+</head>
+
+<body>
+    <div class="page-contents">
+        <div class="body-contents">
+            <div class="advert-page">
+                <div class="welcome-sign">
+                    <div class="title">
+                        <span>Welcome to MoBo</span>
+                    </div>
+                    <div class="description">
+                        Buy movies online for just $0.99. <br>
+                        Get access to all the latest movies
+                    </div>
+                </div>
+                <div class="show-more">
+                    <span> Show More</span>
+                </div>
+            </div>
+
+            <div class="logo-side">
+                <img src="/Mobo_logo.png" class="logo-img">
+            </div>
+        </div>
+
+        <!--Another page after the advert page is hidden-->
+        <div class="movies-page">
+            <div class="nav-bar"> <!--Navigation bar-->
+                <ul>
+                    <li><img src="/Mobo_logo.png" class="nav-logo" ></li>
+                    <li class="item">Movies</li>
+                    <li class="item">Drama</li>
+                    <li class="item">TV Show</li>
+                    <li class="cart item"> Cart<i class="fas fa-shopping-cart"></i></li>
+                </ul>
+            </div>
+
+            <!--Body contents-->
+            <div class="slide-show">
+                <div class="movies category">
+                    <div class="title">
+                        <span>Movies</span>
+                    </div>
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <img src="/images/Alien_Invasion.jpg" />
+                              <div class="buy-movie">
+                                <span class="movie-title">Last Day On Earth</span>
+                                <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
+                              </div>
+                        </div>
+                          <div class="swiper-slide"><img src="/images/avenger_civil_war.jpg" />
+                            <span class="movie-title">Last Day On Earth</span>
+                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                          <div class="swiper-slide"><img src="/images/lion_king.jpg" />
+                            <span class="movie-title">Last Day On Earth</span>
+                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>                        
+                        </div>
+                          <div class="swiper-slide"><img src="/images/spidey_venom.jpg" />
+                            <span class="movie-title">Last Day On Earth</span>
+                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                          <div class="swiper-slide"><img src="/images/groot.jpg" />
+                            <span class="movie-title">Last Day On Earth</span>
+                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                        <div class="swiper-pagination">
+                            <span class="movie-title">Last Day On Earth</span>
+                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+<!--I do not own any of these photos.
+There photos were taken from www.wallpaperflare.com and it will not be used for any commercial purposes.-->
+</html>

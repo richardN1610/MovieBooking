@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+body{
+    overflow: hidden;
+}
 
 .body-contents{
     position: absolute;
@@ -55,17 +58,20 @@
 }
 
 .nav-bar{
-    background-color: rgba(57, 56, 58, 0.637);
     color: wheat;
     display: inline-block;
     width: 100vw;
     height: 8vh;
+    border-bottom: 2px solid white;
 }
 
-ul li{
+.nav-bar ul li{
     list-style: none;
     float: left;
     font-size: 1.5vw;
+}
+li:hover{
+    cursor: pointer;
 }
 .item{
     margin: 20px 40px;
@@ -78,33 +84,46 @@ ul li{
     position: absolute;
     right: 5vw;
 }
-.nav-bar li{
-    cursor: pointer;
-}
-
-.slide-show{
-    width: 95vw;
-    height: 80vh;
-    background-color: rgba(65, 64, 64, 0.315);
-    margin: auto;
-}
-
-.category{
-    font-size: 2.7rem;
-    color: rgb(238, 213, 165);
+.title{
     text-align: center;
-    margin-top: 2vh;
+    color: wheat;
+    font-size: 3vw;
+    margin-top: 3vh;
 }
-.carousel{
-    height: 85vh;
-    width: 85vw;
-    margin: -25vh auto;
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin-top: 5vh;
 }
-.carousel .carousel-item{
-    width: 55vw;
-}
-
-.carousel .carousel-item img{
+.swiper-slide {
     width: 40vw;
     height: 50vh;
+}
+.swiper-slide img{
+    width: 40vw;
+    height: 50vh;
+}
+
+.movie-title{
+    font-size: 1.5vw;
+    color: wheat;
+    padding-left: 3vw;
+}
+.buy-btn{
+    width: 5vw;
+    height:3.5vh;
+    margin-left: 15vw;
+    background-color: rgb(80, 77, 77);
+    font-size: 1.25vw;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: -2px 3px rgb(37, 37, 37);
+    color: wheat;
+}
+.buy-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
