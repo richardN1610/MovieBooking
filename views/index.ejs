@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!--CDN for swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--CDN for swiper-->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Mobo_logo.png" sizes="128x128" />
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js" defer></script>
     <title>MoBo</title>
 </head>
 
@@ -42,14 +43,42 @@
 
         <!--Another page after the advert page is hidden-->
         <div class="movies-page">
-            <div class="nav-bar"> <!--Navigation bar-->
+            <div class="nav-bar">
+                <!--Navigation bar-->
                 <ul>
-                    <li><img src="/Mobo_logo.png" class="nav-logo" ></li>
+                    <li><img src="/Mobo_logo.png" class="nav-logo"></li>
                     <li class="item">Movies</li>
                     <li class="item">Drama</li>
                     <li class="item">TV Show</li>
-                    <li class="cart item"> Cart<i class="fas fa-shopping-cart"></i></li>
+                    <li class="cart item" id="cart"> Cart<i class="fas fa-shopping-cart"></i></li>
                 </ul>
+            </div>
+            <div class="cart-list" id="cart-list">
+                <div class="cart-title">
+                    <span>Cart</span>
+                    <span class="quit-btn" id="quit-btn">&times</span>
+                </div>
+                <div class="cart-body">
+                    <!-- <div class="item-details">
+                        <div class="item-name">
+                            ${itemName}
+                        </div>
+                        <div class="item-price" >
+                            $ ${itemPrice}
+                        </div>
+                        <div class="item-remove">
+                            <i class="far fa-trash-alt remove-item"></i>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-end">
+                    <div class="total-amount">
+                        Total : $0
+                    </div>
+                    <div class="pay-btn">
+                        <span>Purchase</span>
+                    </div>
+                </div>
             </div>
 
             <!--Body contents-->
@@ -60,34 +89,17 @@
                     </div>
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                              <img src="/images/Alien_Invasion.jpg" />
-                              <div class="buy-movie">
-                                <span class="movie-title">Last Day On Earth</span>
-                                <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                              </div>
+                            <% list.Movies.forEach(function(item){%>    
+                            <div class="swiper-slide" data-item-id="<%=item.id%>">  
+                                <img src="/images/<%=item.imageFile%>">
+                                <div class="buy-movie">
+                                    <span class="movie-title"><%= item.name%></span>
+                                    <span class="movie-price"><%= item.price%></span>
+                                    <button type= "button" class="buy-btn"><i class="fas fa-cart-plus" style="pointer-events: none;"></i></button>
+                                </div>
+                            </div>
+                            <% }) %>
                         </div>
-                          <div class="swiper-slide"><img src="/images/avenger_civil_war.jpg" />
-                            <span class="movie-title">Last Day On Earth</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                        </div>
-                          <div class="swiper-slide"><img src="/images/lion_king.jpg" />
-                            <span class="movie-title">Last Day On Earth</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>                        
-                        </div>
-                          <div class="swiper-slide"><img src="/images/spidey_venom.jpg" />
-                            <span class="movie-title">Last Day On Earth</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                        </div>
-                          <div class="swiper-slide"><img src="/images/groot.jpg" />
-                            <span class="movie-title">Last Day On Earth</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                        </div>
-                        <div class="swiper-pagination">
-                            <span class="movie-title">Last Day On Earth</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                        </div>
-                      </div>
                     </div>
                 </div>
             </div>
@@ -98,4 +110,5 @@
 </body>
 <!--I do not own any of these photos.
 There photos were taken from www.wallpaperflare.com and it will not be used for any commercial purposes.-->
+
 </html>

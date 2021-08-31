@@ -19,13 +19,13 @@
             "imageFile": "groot.jpg"
         },
         {
-            "id": 4 ,
-            "name": "Last Day On Earth",
+            "id": 4,
+            "name": "The Lion King",
             "price": 99,
-            "imageFile": "Alien_Invasion.jpg"
+            "imageFile": "lion_king.jpg"
         },
         {
-            "id": 5 ,
+            "id": 5,
             "name": "Spiderman vs Venom",
             "price": 99,
             "imageFile": "spidey_venom.jpg"
